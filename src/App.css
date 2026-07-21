@@ -2,15 +2,26 @@
    PAGE WRAPPER
    ══════════════════════════════════════════════ */
 .page-wrapper {
+  position: relative;
   min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px 12px;
-  background:
-    radial-gradient(ellipse at 30% 60%, rgba(120, 90, 55, 0.6) 0%, transparent 60%),
-    radial-gradient(ellipse at 75% 30%, rgba(90, 65, 35, 0.5) 0%, transparent 55%),
-    linear-gradient(145deg, #7a6040 0%, #5c4830 40%, #6b5238 70%, #4e3c28 100%);
+  background-image: url('./assets/wedding_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.page-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 25, 15, 0.45); /* Warm dark overlay */
+  backdrop-filter: blur(12px);
+  z-index: -1;
 }
 
 /* ══════════════════════════════════════════════
