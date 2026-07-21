@@ -10,12 +10,17 @@ function App() {
     <div className="page-wrapper">
       <div 
         className={`envelope-wrapper ${isEnvelopeOpened ? 'open' : ''}`} 
-        onClick={() => setIsEnvelopeOpened(true)}
       >
-        <div className="envelope-flap">
-          <div className="envelope-seal">Click Me</div>
-        </div>
         <div className="envelope-back"></div>
+        
+        <div className="envelope-flaps">
+          <div className="flap left-flap"></div>
+          <div className="flap right-flap"></div>
+          <div className="flap bottom-flap"></div>
+          <div className="flap top-flap">
+            <div className="envelope-seal" onClick={(e) => { e.stopPropagation(); setIsEnvelopeOpened(true); }}>Click Me</div>
+          </div>
+        </div>
         
         <div className="invitation-card">
         {/* ── Invitation text ── */}
@@ -69,8 +74,6 @@ function App() {
         </div>
       </div>
       
-        <div className="envelope-front"></div>
-        {/* Note: In a real envelope, the front has sides and a bottom folded in. We'll simulate this with borders in CSS */}
       </div>
 
       <RsvpModal isOpen={isRsvpOpen} onClose={() => setIsRsvpOpen(false)} />
