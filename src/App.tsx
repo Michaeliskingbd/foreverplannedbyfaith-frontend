@@ -4,10 +4,20 @@ import './App.css'
 
 function App() {
   const [isRsvpOpen, setIsRsvpOpen] = useState(false);
+  const [isEnvelopeOpened, setIsEnvelopeOpened] = useState(false);
 
   return (
     <div className="page-wrapper">
-      <div className="invitation-card">
+      <div 
+        className={`envelope-wrapper ${isEnvelopeOpened ? 'open' : ''}`} 
+        onClick={() => setIsEnvelopeOpened(true)}
+      >
+        <div className="envelope-flap">
+          <div className="envelope-seal">Click Me</div>
+        </div>
+        <div className="envelope-back"></div>
+        
+        <div className="invitation-card">
         {/* ── Invitation text ── */}
         <div className="invitation-content">
           <p className="together-families">Together with their families</p>
@@ -57,6 +67,10 @@ function App() {
             </p>
           </div>
         </div>
+      </div>
+      
+        <div className="envelope-front"></div>
+        {/* Note: In a real envelope, the front has sides and a bottom folded in. We'll simulate this with borders in CSS */}
       </div>
 
       <RsvpModal isOpen={isRsvpOpen} onClose={() => setIsRsvpOpen(false)} />
