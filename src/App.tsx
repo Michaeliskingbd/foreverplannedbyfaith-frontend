@@ -12,11 +12,11 @@ function App() {
         <div className="invitation-content">
           <p className="together-families">Together with their families</p>
 
-          <p className="name-script bride">Aladejuyigbe Kehinde</p>
+          <p className="name-script bride">Kehinde Aladejuyigbe</p>
 
           <p className="ampersand">weds</p>
 
-          <p className="name-script groom">Ukachukwu Faith</p>
+          <p className="name-script groom">Faith Ukachukwu</p>
 
           <p className="body-copy invite-line">
             Join us as we celebrate our civil wedding
