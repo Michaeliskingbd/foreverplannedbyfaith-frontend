@@ -27,7 +27,8 @@ export default function AdminDashboard() {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/rsvp', {
+      const API_URL = import.meta.env.VITE_API_URL || 'https://foreverplannedbyfaith-backend.onrender.com';
+      const response = await fetch(`${API_URL}/api/rsvp`, {
         headers: {
           'Authorization': `Bearer ${passcode}`,
         },
@@ -52,7 +53,8 @@ export default function AdminDashboard() {
   const handleRefresh = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/rsvp', {
+      const API_URL = import.meta.env.VITE_API_URL || 'https://foreverplannedbyfaith-backend.onrender.com';
+      const response = await fetch(`${API_URL}/api/rsvp`, {
         headers: {
           'Authorization': `Bearer ${passcode}`,
         },

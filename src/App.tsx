@@ -37,7 +37,7 @@ function App() {
           </p>
 
           <p className="body-copy quote-line">
-            " A love rooted in faith, strengthened by grace and sealed forever "
+            " A love rooted in faith, strengthened by grace and sealed forever"
           </p>
           <p className="body-copy hashtag-line">#ForeverplannedbyFaith#</p>
 
