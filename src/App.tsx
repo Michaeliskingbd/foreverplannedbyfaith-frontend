@@ -17,10 +17,15 @@ function App() {
           <div className="flap left-flap"></div>
           <div className="flap right-flap"></div>
           <div className="flap bottom-flap"></div>
-          <div className="flap top-flap">
-            <div className="envelope-seal" onClick={(e) => { e.stopPropagation(); setIsEnvelopeOpened(true); }}>Click Me</div>
-          </div>
+          <div className="flap top-flap"></div>
         </div>
+
+        {/* Seal sits OUTSIDE on top of the flaps, centered where they all meet */}
+        {!isEnvelopeOpened && (
+          <div className="envelope-seal" onClick={(e) => { e.stopPropagation(); setIsEnvelopeOpened(true); }}>
+            <span className="seal-text">Click Me</span>
+          </div>
+        )}
         
         <div className="invitation-card">
         {/* ── Invitation text ── */}
