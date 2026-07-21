@@ -32,9 +32,8 @@ function App() {
           </p>
 
           <p className="body-copy venue-line">
-           <strong>Reception Venue:</strong> <strong>Norton Methodist Church</strong>
-            
-             {" "}Norton Road, <strong>Stockton-on-Tees</strong>, <strong>TS20 2QQ</strong>
+           <strong>Reception Venue:</strong> <strong>Norton Methodist Church Hall,</strong>
+             {" "} <strong>Norton Road</strong>, <strong>Stockton-on-Tees</strong>, <strong>TS20 2QQ</strong>
           </p>
 
           <p className="body-copy quote-line">
